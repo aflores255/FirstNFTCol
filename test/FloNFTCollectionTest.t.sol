@@ -9,7 +9,6 @@ import "src/FloNFTCollection.sol";
 
 //3. Contract
 contract FloNFTCollectionTest is Test {
-    
     FloNFTCollection nftCollection;
     address user = vm.addr(1);
     uint256 constant MAX_SUPPLY = 5;
@@ -34,8 +33,7 @@ contract FloNFTCollectionTest is Test {
 
     // Test mint different users
     function testMintNFTDifferentUsers() public {
-
-       for (uint256 i = 0; i < MAX_SUPPLY; i++) {
+        for (uint256 i = 0; i < MAX_SUPPLY; i++) {
             address userMint = vm.addr(i + 1);
             vm.prank(userMint);
             nftCollection.safeMint();
@@ -59,7 +57,7 @@ contract FloNFTCollectionTest is Test {
         nftCollection.safeMint();
 
         string memory expectedURI = string.concat(BASE_URI, "0.json");
-        assertEq(nftCollection.tokenURI(0),expectedURI);
+        assertEq(nftCollection.tokenURI(0), expectedURI);
         vm.stopPrank();
     }
 }
