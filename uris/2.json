@@ -1,0 +1,14 @@
+{
+    "name":"Flo Collection NFT 2",
+    "description":"First NFT Collection by Alberto Flores",
+    "image":"ipfs://bafybeidltoxpjtr6576p3vrtphzoliinej3r2y3xer6vbahvkcfb7yu7pa",
+    "attributes": [
+
+        {
+            "trait_type":"Rarity",
+            "value":"0"
+        }
+    ]
+    
+    
+}

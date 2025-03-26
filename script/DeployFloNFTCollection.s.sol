@@ -16,7 +16,7 @@ contract DeployFloNFTCollection is Script {
         string memory name_ = "Flo Collection NFT";
         string memory symbol_ = "FLO";
         uint256 NFTCollectionSupply_ = 2;
-        string memory baseURI_ = "ipfs://bafybeidry2s3wemim3w7ki6zyngrnisr6ti5yykvuho4gy5yyyggywlm2y/";
+        string memory baseURI_ = "ipfs://bafybeig4gvg4nsxzpwtkwslxlxldorkivp5puhujlaqwbji3gr6k2cwbye/";
         FloNFTCollection floNFTCollection = new FloNFTCollection(name_, symbol_, NFTCollectionSupply_, baseURI_);
         vm.stopBroadcast();
         return floNFTCollection;
