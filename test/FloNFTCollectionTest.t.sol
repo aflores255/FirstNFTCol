@@ -41,6 +41,7 @@ contract FloNFTCollectionTest is Test {
         }
     }
 
+    // Test up to the maximum supply to ensure limit is reached
     function testMintUpToMaxSupply() public {
         vm.startPrank(user);
         for (uint256 i = 0; i < MAX_SUPPLY; i++) {
@@ -52,6 +53,7 @@ contract FloNFTCollectionTest is Test {
         vm.stopPrank();
     }
 
+    // Test the token URI is properly assigned
     function testTokenURI() public {
         vm.startPrank(user);
         nftCollection.safeMint();
