@@ -10,16 +10,16 @@ import {Strings} from "../lib/openzeppelin-contracts/contracts/utils/Strings.sol
 
 contract FloNFTCollection is ERC721 {
     using Strings for uint256;
+    
     // Variables definition
-
     uint256 public currentTokenId; //0
     uint256 public NFTCollectionSupply;
     string public baseUri;
+    
     //Events
-
     event MintNFT(address address_, uint256 tokenId_);
+    
     // Constructor
-
     constructor(string memory name_, string memory symbol_, uint256 NFTCollectionSupply_, string memory baseURI_)
         ERC721(name_, symbol_)
     {
@@ -28,7 +28,6 @@ contract FloNFTCollection is ERC721 {
     }
 
     // Functions
-
     function safeMint() external {
         require(currentTokenId < NFTCollectionSupply, "Max Supply reached");
         _safeMint(msg.sender, currentTokenId);
